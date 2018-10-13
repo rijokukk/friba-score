@@ -2,6 +2,7 @@ import React from 'react';
 
 import './Hole.css';
 
+// A single hole layout
 const hole = (props) => {
     return(
         <div className="Hole">
@@ -9,7 +10,7 @@ const hole = (props) => {
             <p>Heitot:</p>
             <div className="FlexContainer">
                 <button onClick={() => props.clicked(-1)}><i className="fas fa-minus"></i></button>
-                <p className="Throws">{props.throws}</p>
+                <h4 className="Throws">{props.throws}</h4>
                 <button onClick={() => props.clicked(1)}><i className="fas fa-plus"></i></button>
             </div>
         </div>

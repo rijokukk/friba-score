@@ -30,6 +30,14 @@
 .FlexContainer button {
   width: 50px;
   cursor: pointer;
+  background-color: black;
+  color: white;
+  outline: none;
+  font-weight: bold;
+}
+
+.FlexContainer button:hover {
+  background-color: rgb(104, 107, 107);
 }
 
 .Throws {

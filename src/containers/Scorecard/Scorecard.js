@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 
 import './Scorecard.css';
-import Game from '../../components/Game/Game';
+import Holes from '../../components/Holes/Holes';
 import axiosTracks from '../../axios-tracks';
 import axiosGames from '../../axios-games';
 
+// Page for the scorecard.
 class Scorecard extends Component {
     state = {
         name: null,
         holes: []
     }
 
-
+    // Retrieves the selected track from database and save it to the state
     componentDidMount() {
         if (this.props.match.params.id) {
             axiosTracks.get('/' + this.props.match.params.id + '.json')
@@ -31,7 +32,7 @@ class Scorecard extends Component {
         }
     }
 
-
+    // Updates the score of the round when the throws are modified
     scoreUpdateHandler = (id, amount) => {
         const holes = [...this.state.holes];
         for (const key in holes) {
@@ -43,8 +44,8 @@ class Scorecard extends Component {
         this.setState({ holes: holes })
     }
 
+    // Calculates the final score and save the scorecard to the database
     finishGameHandler = () => {
-        // Calculates the final score
         let finalScore = 0;
         for (const key in this.state.holes) finalScore = finalScore + this.state.holes[key].score;
 
@@ -54,18 +55,21 @@ class Scorecard extends Component {
             date: '13.10.2018'
         }
         axiosGames.post('', result)
-            .then(res => console.log(res));
+            .then(this.props.history.push('/'))
+            .catch(e => console.log(e));
     }
 
     render() {
         return (
-            <div className="Scorecard">
+            <>
                 <h1>{this.state.name}</h1>
-                <Game
+                <Holes
                     holes={this.state.holes}
                     clicked={this.scoreUpdateHandler} />
-                <button onClick={this.finishGameHandler}>Lopeta peli</button>
-            </div>
+                <button className="Button" onClick={this.finishGameHandler}>
+                    Lopeta peli
+                </button>
+            </>
         );
     }
 }

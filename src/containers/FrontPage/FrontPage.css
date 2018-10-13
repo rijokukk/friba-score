@@ -16,3 +16,15 @@
 .FrontPage a:hover {
   background-color: rgb(60, 78, 82);
 }
+
+.PrevGames {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .PrevGames {
+    width: 1000px;
+    margin: auto;
+  }
+}
+

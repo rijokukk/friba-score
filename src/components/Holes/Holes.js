@@ -3,6 +3,7 @@ import React from 'react';
 import './Holes.css';
 import Hole from './Hole/Hole';
 
+// Holes are shown in the scorecard
 const holes = (props) => props.holes.map(h => {
     return(
         <div key={h.hole} className="Holes">

@@ -3,6 +3,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navigation.css';
 
+// Navigation bar. There is a list with single item, 
+// because it is supposed to be extended with authentication.
 const navigation = () => {
     return (
         <div className="Navigation">
@@ -14,7 +16,6 @@ const navigation = () => {
                 <nav className="NavItems">
                     <ul className="NavList">
                         <li className="NavItem"><NavLink to="/rata-valinta">Uusi peli</NavLink></li>
-                        <li className="NavItem"><NavLink exact to="/">Kirjaudu</NavLink></li>
                     </ul>
                 </nav>
             </header>

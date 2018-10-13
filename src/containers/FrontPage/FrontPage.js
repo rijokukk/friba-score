@@ -5,11 +5,13 @@ import { Link } from 'react-router-dom';
 import axios from '../../axios-games';
 import PreviousGames from '../../components/PreviousGames/PreviousGames';
 
+// The frontpage of the app. Here you can see the previous games and start a new game.
 class Frontpage extends Component {
     state = {
         previousGames: []
     }
 
+    // Retrieves the previous games from the database.
     componentDidMount() {
         axios.get()
             .then(response => {
@@ -32,9 +34,11 @@ class Frontpage extends Component {
                 <div className="NewGame">
                     <Link to="/rata-valinta">Uusi peli</Link>
                 </div>
-                <h2>Aiemmat pelit:</h2>
-                <PreviousGames
-                    previousGames={this.state.previousGames} />
+                <div className="PrevGames">
+                    <h2>Aiemmat pelit:</h2>
+                    <PreviousGames
+                        previousGames={this.state.previousGames} />
+                </div>
             </div>
         )
     }

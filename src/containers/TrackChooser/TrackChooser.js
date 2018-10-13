@@ -3,11 +3,13 @@ import React, { Component } from 'react';
 import axios from '../../axios-tracks';
 import Tracks from '../../components/Tracks/Tracks';
 
+// Page for choosing a track when selecting new game
 class TrackChooser extends Component {
     state = {
         tracks: []
     }
 
+    // Get the tracks from database and them to state
     componentDidMount() {
         axios.get('.json')
             .then(response => {
