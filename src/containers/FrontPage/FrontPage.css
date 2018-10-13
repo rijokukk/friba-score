@@ -1,16 +1,13 @@
-@media (min-width: 768px) {
-    FrontPage {
-      width: 1000px;
-      margin: auto;
-    }
-  }
+.NewGame {
+  margin-top: 35px;
+  margin-bottom: 60px;
+}
 
-.FrontPage a {
+.NewGame a {
   border: 1px solid #ccc;
   box-shadow: 0 2px 2px #ccc;
-  background-color: black;
-  width: 90%;    
-  padding: 10px;
+  background-color: black;    
+  padding: 20px;
   text-align: center;
   text-decoration: none;
   color: white;

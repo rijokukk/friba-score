@@ -9,7 +9,7 @@ class TrackChooser extends Component {
     }
 
     componentDidMount() {
-        axios.get()
+        axios.get('.json')
             .then(response => {
                 const tracks = [];
                 for (const key in response.data) {
