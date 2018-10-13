@@ -1,0 +1,55 @@
+.Navigation {
+    height: 60px;
+}
+
+.Header {
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    z-index: 100;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.Logo {
+    margin: 0 10px;
+    font-size: 1.3rem;
+}
+
+.Spacer {
+    flex: 1;
+}
+
+.Header a {
+    text-decoration: none;
+    color: white;
+}
+
+.NavList {
+    display: inline;
+    padding: 20px;
+  }
+  
+  @media (min-width: 450px) {
+    .NavList {
+        display: flex;
+      }
+  }
+
+.NavItem {
+    margin: 5px 10px;
+  }
+  
+.NavItem a {
+    text-decoration: none;
+    color: white;
+  }
+  
+.NavItem a:hover,
+.NavItem a:active {
+    color: red;
+  }

@@ -4,3 +4,18 @@
       margin: auto;
     }
   }
+
+.FrontPage a {
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 2px #ccc;
+  background-color: black;
+  width: 90%;    
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.FrontPage a:hover {
+  background-color: rgb(60, 78, 82);
+}

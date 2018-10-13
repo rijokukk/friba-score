@@ -8,7 +8,7 @@ class Frontpage extends Component {
         return (
             <div className="FrontPage">
                 <h1>FribaScore</h1>
-                <Link to="/track-chooser">Uusi peli</Link>
+                <Link to="/rata-valinta">Uusi peli</Link>
                 <h2>Aiemmat pelit:</h2>
             </div>
         )
