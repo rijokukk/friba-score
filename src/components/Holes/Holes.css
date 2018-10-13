@@ -1,0 +1,7 @@
+.Holes {
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    align-items: left;
+    justify-content: center;
+}

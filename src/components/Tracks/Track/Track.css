@@ -1,0 +1,32 @@
+.Track {
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 2px #ccc;
+    background-color: white;
+    width: 90%;    
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Track a {
+    text-decoration: none;
+    color: black;
+}
+
+.Track:hover {
+    background-color: #ccc;
+}
+
+@media (min-width: 850px) {
+    .Track {
+      width: 400px;
+      margin: 10px;
+    }
+  }
+  
+  @media (max-width: 850px) {
+    .Track {
+      width: 300px;
+      margin: 10px;
+    }
+  }
