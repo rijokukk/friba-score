@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import TrackChooser from '../TrackChooser/TrackChooser';
 import Scorecard from '../Scorecard/Scorecard';
 import FrontPage from '../FrontPage/FrontPage';
+import PageRefresher from '../PageRefresher/PageRefresher';
 import Navigation from '../../components/Navigation/Navigation';
 import { Route, Switch } from 'react-router-dom';
 
@@ -14,6 +15,7 @@ class FribaScore extends Component {
                 <Navigation />
                 <Route path="/" exact component={FrontPage} />
                 <Switch>
+                     <Route path="/pagerefresher" component={PageRefresher} />
                     <Route path="/rata-valinta" component={TrackChooser} />
                     <Route path="/uusi-peli/:id" exact component={Scorecard} />
                 </Switch>
